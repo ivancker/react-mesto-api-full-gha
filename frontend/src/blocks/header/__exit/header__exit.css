@@ -1,0 +1,13 @@
+.header__exit {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+@media all and (max-width: 900px) {
+  .header__exit {
+    margin-right: 27px;
+    margin-left: 10px;
+  }
+}

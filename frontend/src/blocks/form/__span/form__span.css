@@ -1,0 +1,10 @@
+.form__span {
+  width: 358px;
+  height: 30px;
+}
+
+@media all and (max-width: 700px) {
+  .form__span {
+    width: 238px;
+  }
+}

@@ -1,0 +1,5 @@
+.popup-picture__element {
+  display: flex;
+  flex-direction: column;
+
+}

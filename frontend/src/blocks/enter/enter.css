@@ -1,0 +1,7 @@
+.enter {
+  margin: auto;
+  padding: 60px 0 80px;
+  max-width: 880px;
+  height: 100vh;
+  box-sizing: border-box;
+}

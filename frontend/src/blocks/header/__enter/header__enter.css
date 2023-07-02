@@ -1,0 +1,18 @@
+.header__enter {
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  transition: opacity .3s linear;
+}
+
+.header__enter:hover {
+  opacity: .6;
+}
+
+@media all and (max-width: 900px) {
+  .header__enter {
+    margin-right: 27px;
+  }
+}
+

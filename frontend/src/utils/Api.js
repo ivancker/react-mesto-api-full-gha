@@ -115,7 +115,7 @@ class Api {
 }
 
 const api = new Api({
-  url: 'http://localhost:3000/',
+  url: 'http://api.mestoo.nomoreparties.sbs/',
   headers: {
     authorization: `Bearer ${localStorage.getItem('jwt')}`,
     'Content-type': 'application/json',

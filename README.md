@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 84.201.167.133
 
-Frontend https://...
+Frontend https://mestoo.nomoreparties.sbs
 
-Backend https://...
+Backend http://api.mestoo.nomoreparties.sbs

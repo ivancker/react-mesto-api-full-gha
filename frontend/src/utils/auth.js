@@ -1,5 +1,5 @@
 export const BASE_URL =
-  'http://api.mestoo.nomoreparties.sbs';
+  'http://localhost:8080';
 
 const getResponse = (res) => {
   return res.ok
@@ -40,7 +40,14 @@ export const login = (
       email,
       password,
     }),
-  }).then(getResponse);
+  })
+  .then(getResponse)
+  .then((data) => {
+    if (data.token){
+      localStorage.setItem('token', data.token);
+      return data
+    }
+  })
 };
 
 export const getContent = (jwt) => {
@@ -49,7 +56,7 @@ export const getContent = (jwt) => {
     headers: {
       'Content-Type':
         'application/json',
-      Authorization: `Bearer ${jwt}`,
+      authorization: `Bearer ${jwt}`,
     },
   }).then(getResponse);
 };

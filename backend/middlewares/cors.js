@@ -3,8 +3,8 @@ const allowedCors = [
   'http://mestoo.nomoreparties.sbs',
   'https://localhost:3000',
   'http://localhost:3000',
-  'https://localhost:3001',
-  'http://localhost:3001',
+  'https://localhost:8080',
+  'http://localhost:8080',
 ];
 
 const cors = (req, res, next) => {

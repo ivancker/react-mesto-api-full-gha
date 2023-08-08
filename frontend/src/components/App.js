@@ -89,11 +89,11 @@ function App() {
   }, [loggedIn]);
 
   useEffect(() => {
-    const jwt =
-      localStorage.getItem('jwt');
-    if (jwt) {
+    const token =
+      localStorage.getItem('token');
+    if (token) {
       auth
-        .getContent(jwt)
+        .getContent(token)
         .then((res) => {
           setLoggedIn(true);
           setEmail(res.email);
@@ -106,12 +106,10 @@ function App() {
   }, [navigate]);
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some(
-      (i) => i._id === currentUser._id
-    );
+    const isLiked = card.likes.some(id => id === currentUser._id);
 
     api
-      .addLike(card._id, !isLiked)
+      .changeLikeCard(card._id, !isLiked)
       .then((newCard) => {
         setCards((state) =>
           state.map((c) =>
@@ -266,7 +264,7 @@ function App() {
       .then((data) => {
         if (data) {
           localStorage.setItem(
-            'jwt',
+            'token',
             data.token
           );
           setLoggedIn(true);
@@ -283,8 +281,8 @@ function App() {
 
   // Функция для выхода из профиля
   function signOut() {
-    localStorage.removeItem('jwt');
-    navigate('/sign-in');
+    localStorage.removeItem('token');
+    navigate('/sign-up');
     setLoggedIn(false);
     setEmail('');
   }

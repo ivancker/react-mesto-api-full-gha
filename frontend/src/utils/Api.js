@@ -112,7 +112,12 @@ class Api {
       this._responseResult(response)
     );
   }
+
+  changeLikeCard(cardId, isLiked) {
+    return isLiked ? this.addLike(cardId) : this.deleteLike(cardId);
+  }
 }
+
 
 const api = new Api({
   url: 'http://localhost:8080/',

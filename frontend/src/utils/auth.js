@@ -50,13 +50,13 @@ export const login = (
   })
 };
 
-export const getContent = (jwt) => {
+export const getContent = (token) => {
   return fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
     headers: {
       'Content-Type':
         'application/json',
-      authorization: `Bearer ${jwt}`,
+      authorization: `Bearer ${token}`,
     },
   }).then(getResponse);
 };

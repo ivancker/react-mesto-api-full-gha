@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 function Header({ email, onSignOut }) {
+  
   return (
     <header className="header">
       <img

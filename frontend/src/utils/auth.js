@@ -1,5 +1,5 @@
 export const BASE_URL =
-  'http://51.250.101.177/:3001';
+  'http://51.250.101.177';
 
 const getResponse = (res) => {
   return res.ok

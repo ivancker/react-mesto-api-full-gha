@@ -1,5 +1,5 @@
 export const BASE_URL =
-  'http://http://api.mestoo.nomoreparties.sbs/:8080';
+  'http://51.250.101.177/:8080';
 
 const getResponse = (res) => {
   return res.ok

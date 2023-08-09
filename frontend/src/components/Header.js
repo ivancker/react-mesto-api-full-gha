@@ -27,7 +27,7 @@ function Header({ email, onSignOut }) {
           }
         />
         <Route
-          path="sign-up"
+          path="/sign-up"
           element={
             <Link
               className="header__enter"

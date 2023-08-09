@@ -10,8 +10,9 @@ function Main({
   onCardLike,
   onCardDelete,
   cards,
-}) {
-  const { name, about, avatar } =
+})
+ {
+  const { about, name, avatar } =
     useContext(CurrentUserContext);
 
   return (

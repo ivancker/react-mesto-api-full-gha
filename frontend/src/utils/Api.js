@@ -120,7 +120,7 @@ class Api {
 
 
 const api = new Api({
-  url: 'http://51.250.101.177/',
+  url: 'http://api.mestoo.nomoreparties.sbs/',
   headers: {
     authorization: `Bearer ${localStorage.getItem('token')}`,
     'Content-type': 'application/json',

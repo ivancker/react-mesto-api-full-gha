@@ -121,6 +121,7 @@ class Api {
 
 const api = new Api({
   url: 'http://api.mestoo.nomoreparties.sbs/',
+  mode: "no-cors",
   headers: {
     authorization: `Bearer ${localStorage.getItem('token')}`,
     'Content-type': 'application/json',

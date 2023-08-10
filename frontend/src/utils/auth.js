@@ -15,6 +15,7 @@ export const register = (
 ) => {
   return fetch(`${BASE_URL}/signup`, {
     method: 'POST',
+    mode: "no-cors",
     headers: {
       'Content-Type':
         'application/json',
@@ -32,6 +33,7 @@ export const login = (
 ) => {
   return fetch(`${BASE_URL}/signin`, {
     method: 'POST',
+    mode: "no-cors",
     headers: {
       'Content-Type':
         'application/json',
@@ -53,6 +55,7 @@ export const login = (
 export const getContent = (token) => {
   return fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
+    mode: "no-cors",
     headers: {
       'Content-Type':
         'application/json',

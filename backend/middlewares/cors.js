@@ -1,5 +1,7 @@
 const allowedCors = [
   'https://api.mestoo.nomoreparties.sbs',
+  'http://api.mestoo.nomoreparties.sbs',
+  'https://mestoo.nomoreparties.sbs',
   'http://mestoo.nomoreparties.sbs',
   'https://localhost:3000',
   'http://localhost:3000',

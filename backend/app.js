@@ -1,8 +1,3 @@
-const corsOptions = {
-  origin: '*',
-  credentials: true,
-  optionSuccessStatus: 200,
-};
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -18,13 +13,12 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
 const app = express();
+app.use(cors());
 app.use(helmet());
 app.use(bodyParser.json()); // подключение body-parser к app
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(requestLogger);
-
-app.use(cors(corsOptions));
 
 app.get('/crash-test', () => {
   setTimeout(() => {

@@ -5,6 +5,7 @@ const { errors } = require('celebrate');
 const bodyParser = require('body-parser'); // без этого пост не работает
 const helmet = require('helmet');
 const cors = require('cors');
+const corsConfig = require('./middlewares/cors');
 const handleError = require('./middlewares/handleError');
 const routers = require('./routes');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
@@ -18,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(requestLogger);
 
-app.use(cors());
+app.use(cors(corsConfig));
 
 app.get('/crash-test', () => {
   setTimeout(() => {

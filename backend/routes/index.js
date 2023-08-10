@@ -6,11 +6,11 @@ const auth = require('../middlewares/auth');
 const { validateSignUp, validateSignIn } = require('../middlewares/validate');
 const NotFoundError = require('../errors/notFoundError'); // 404
 
-router.post('/api/signup', validateSignUp, usersController.createUser);
-router.post('/api/signin', validateSignIn, usersController.loginUser);
+router.post('/signup', validateSignUp, usersController.createUser);
+router.post('/signin', validateSignIn, usersController.loginUser);
 
-router.use('/api/users', auth, userRouter);
-router.use('/api/cards', auth, cardRouter);
+router.use('/users', auth, userRouter);
+router.use('/cards', auth, cardRouter);
 
 router.use(auth, () => {
   throw new NotFoundError('Такая страница не существует');

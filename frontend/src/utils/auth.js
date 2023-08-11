@@ -1,5 +1,5 @@
 export const BASE_URL =
-  'http://api.mestoo.nomoreparties.sbs';
+  'https://api.mestoo.nomoreparties.sbs';
 
 const getResponse = (res) => {
   return res.ok

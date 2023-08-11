@@ -14,7 +14,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
 const app = express();
 app.use(cors({
-  origin: ['https://api.mestoo.nomoreparties.sbs'],
+  origin: ['https://mestoo.nomoreparties.sbs'],
 }));
 app.use(helmet());
 app.use(bodyParser.json()); // подключение body-parser к app

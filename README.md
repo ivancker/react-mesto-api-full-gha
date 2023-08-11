@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.101.177
+IP 51.250.101.177
 
 Frontend https://mestoo.nomoreparties.sbs
 

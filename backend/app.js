@@ -13,8 +13,20 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
 const app = express();
-// app.use(cors(corsConfig));
-app.use(cors({ origin: 'https://mestoo.nomoreparties.sbs' }));
+app.use(cors());
+// app.use(cors({ origin: 'https://mestoo.nomoreparties.sbs' }));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-credentials', 'true');
+  res.header('Acces-Control-Allow-Origin', '*');
+  res.header(
+    'Acces-Control-Allow-Header',
+    'Origin, X-Requested-With, Content-Type, Accept, Authorization, X-CSRF-Token',
+  );
+  res.header('Acces-Control-Allow-Methods', 'GET, OPTIONS, POST, DELETE, PUT, PATCH');
+
+  next();
+})
+
 app.use(helmet());
 app.use(bodyParser.json()); // подключение body-parser к app
 app.use(bodyParser.urlencoded({ extended: true }));

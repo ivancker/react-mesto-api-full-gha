@@ -74,27 +74,6 @@ const createUser = (req, res, next) => {
     .catch(next);
 };
 
-// const loginUser = (req, res, next) => {
-//   const { email, password } = req.body;
-
-//   usersModel.findOne({ email }).select('+password')
-//     .orFail(() => new Error('EmailNotFound'))
-//     .then((user) => bcrypt.compare(password, user.password)
-//       .then((matched) => {
-//         if (!matched) {
-//           throw new UnauthorizedError('Неправильные почта или пароль');
-//         }
-//         const token = signToken({ _id: user._id });
-//         res.status(200).send({ token });
-//       }))
-//     .catch((err) => {
-//       if (err.message === 'EmailNotFound') {
-//         return next(new UnauthorizedError('Неправильные почта или пароль'));
-//       }
-//       return next(err);
-//     });
-// };
-
 const loginUser = (req, res, next) => {
   const { email, password } = req.body;
   usersModel

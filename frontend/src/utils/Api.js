@@ -152,10 +152,6 @@ class Api {
 
 const api = new Api({
   url: 'https://api.mestoo.nomoreparties.sbs/',
-  // headers: {
-  //   authorization: `Bearer ${token}`,
-  //   'Content-type': 'application/json',
-  // },
 });
 
 export { api };
